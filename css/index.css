@@ -2,47 +2,53 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 100px;
+  column-gap: 10rem;
   width: 100%;
-  height: calc(100vh - 60px);
-  margin-top: 60px;
-  background-image: url(img/background.jpg);
-  background-size: cover;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+  background-image: url(img/icon/spotlights.png), url(img/background.jpg);
+  background-size: 12.8rem, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 main .main-intro h1 {
-  font-size: 56px;
-  line-height: 66px;
+  font-size: 5.6rem;
+  line-height: 1.1;
 }
 
 main p {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.8rem;
+  line-height: 1.75;
 }
 
 main a {
   display: block;
   width: fit-content;
-  margin-top: 30px;
-  padding: 10px 20px;
-  font-size: 18px;
+  height: 3.2rem;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  line-height: 3.2rem;
+  font-size: 1.8rem;
   background-color: var(--site-color-01);
+  box-shadow:0 0 10px var(--site-color-01),0 0 40px var(--site-color-01),0 0 80px var(--site-color-01);
+  -webkit-box-reflect: below -5px linear-gradient(transparent,var(--site-color-01));
 }
 
-main a:hover,  .index-about-text a:hover{
+main a:hover, .index-about-text a:hover{
   background-color: var(--site-color-01-hover);
+  box-shadow:0 0 10px var(--site-color-01-hover),0 0 40px var(--site-color-01-hover),0 0 80px var(--site-color-01-hover);
+  -webkit-box-reflect: below -5px linear-gradient(transparent,var(--site-color-01-hover));
 }
 
 main .main-quotes p {
-  margin: 40px 0;
-  padding-left: 20px;
+  margin: 4rem 0;
+  padding-left: 2rem;
   border-left: 4px solid var(--site-color-01);
 }
 
 main .main-quotes p:nth-child(2) {
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 
 main .main-intro {
@@ -54,18 +60,18 @@ main .main-intro {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 2rem;
   width: 100%;
-  padding: 60px 0;
-  background-color: #fff;
+  padding: 6rem 0;
+  background-color: #1e1e1e;
 }
 
 .index-category p {
   flex-basis: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 4rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #111;
 }
 
@@ -74,8 +80,8 @@ main .main-intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 14rem;
+  height: 14rem;
   background-color: red;
   background-size: cover;
   background-position: center;
@@ -104,17 +110,17 @@ main .main-intro {
 }
 
 .index-category-box h3 {
-  line-height: 28px;
+  line-height: 1.5;
   text-align: center;
   text-shadow: -2px 2px 4px #000;
-  font-size: 22px;
+  font-size: 1.6rem;
   z-index: 100;
 }
 
 /* ABOUT SECTION */
 .index-about {
   width: 100%;
-  padding: 60px 0;
+  padding: 6rem 0;
   background-color: #1a253a;
 }
 
@@ -122,43 +128,63 @@ main .main-intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 60px;
+  column-gap: 6rem;
 }
 
-.index-about-img img {
-  width: 300px;
-  border-radius: 300px;
+.index-about-image img {
+  width: 15rem;
+  border-radius: 15rem;
 }
 
 .index-about-text {
-  flex-basis: 455px;
+  flex-basis: 45.5rem;
+}
+
+.index-about-text div {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url(img/icon/star.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: #fbfbfb;
+}
+
+.index-about-text h2 {
+  display: inline-block;
+  width: fit-content;
 }
 
 .index-about-text p {
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
 .index-about-text a {
   display: block;
   width: fit-content;
-  padding: 10px 20px;
-  font-size: 18px;
+  height: 2.4rem;
+  padding: 1rem 2rem;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
   background-color: var(--site-color-01);
+  border-radius: 5px;
 }
 
 .index-about-skill {
-  flex-basis: 350px;
+  flex-basis: 35rem;
 }
 
 .index-about-skill-bar {
   width: calc(100% - 8px);
-  height: 20px;
-  border: 4px solid #0b0f16;
+  height: 2rem;
 }
 
 .index-about-skill-bar-fill {
   height: 100%;
   background-color: var(--site-color-01);
+  border-radius: 20px;
 }
 
 .htmlcss {width: 95%;}
