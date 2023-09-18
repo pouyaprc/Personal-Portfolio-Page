@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #1e1e1e;
 }
 
@@ -38,7 +39,7 @@ body::after {
   width: 0;
   height: 0;
   z-index: -1;
-  content: url(img/linkedin-color.png);
+  content: url(img/icon/linkedin-color.png);
 }
 
 .wrapper-main {
