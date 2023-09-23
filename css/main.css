@@ -104,6 +104,15 @@ a {
   background-image: url(img/p.png);
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.header-main-logo-p:hover, .header-main-name:hover {animation: pLetter 900ms ease-in-out infinite alternate;}
+
+@keyframes pLetter {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .header-main-name {
@@ -115,6 +124,7 @@ a {
   border-right: 1px dotted #1e1e1e;
   border-radius: 50%;
   color: #1e1e1e;
+  cursor: pointer;
 }
 
 .header-main-nav {
@@ -128,6 +138,7 @@ a {
 }
 
 .header-main-nav ul li {
+  position: relative;
   display: flex;
   align-items: center;
   float: left;
@@ -172,6 +183,71 @@ a {
   }
 }
 
+/* Drop-down */
+.header-main-nav ul ul {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-left: 0;
+  padding: 0 5px;
+  white-space: nowrap;
+  transition: All ease-in-out 100ms;
+  background-color: rgba(50, 50, 50, 0.5);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 10px 2px 2px 2px rgba(50, 50, 50, 0.5), 10px -2px 2px 2px rgba(50, 50, 50, 0.5);
+  transform: scale(0.9);
+  animation: drop 400ms ease-in-out forwards;
+}
+
+.header-main-nav ul > li:nth-child(4):hover > ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.header-main-nav ul > li:nth-child(4) > ul li:nth-child(4) {
+  transform: scale(-0.5);
+  opacity: 0;
+}
+
+.header-main-nav ul > li:nth-child(4):hover > ul li:nth-child(4) {
+  animation: drop 600ms ease forwards 200ms;
+}
+
+@keyframes drop {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.header-main-nav ul ul li {
+  width: 100%;
+  margin-right: 2rem;
+  padding-left: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.header-main-nav ul ul li div {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.nav-whatsApp {background-image: url(img/icon/whatsapp.png);}
+.nav-telegram {background-image: url(img/icon/telegram.png);}
+.nav-instagram {background-image: url(img/icon/instagram.png);}
+.nav-imo {background-image: url(img/icon/imo.png);}
+
+/* Header social-media */
 .header-main-sm {
   display: flex;
   align-items: center;
@@ -181,19 +257,6 @@ a {
   padding-right: 60px;
 }
 
-/*
-.header-main-sm-fb {
-  width: 2rem;
-  height: 2rem;
-  background-image: url(img/facebook.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.header-main-sm-fb:hover {
-  background-image: url(img/facebook-color.png);
-}
-*/
 .header-main-sm-network {
   width: 3.2rem;
   height: 3.2rem;
@@ -209,7 +272,6 @@ a {
 }
 
 /* FOOTER SECTION */
-
 .footer-main {
   width: 100%;
   padding: 6rem 0 10rem;
